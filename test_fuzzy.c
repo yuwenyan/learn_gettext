@@ -24,6 +24,7 @@ int main(int argc, char **argv)
     strncpy(const_str, 
         "aabbccddeeffgghhiijjkkllmmnnooppqqrrssttuuvvwwxxyyzz",
         MAX_CHAR);
+    gettext("aabbccddeeffgghhiijjkkllmmnnooppqqrrssttuuvvwwxxyyzz");
     strncpy(test_str, 
         gettext("not a string a1abbccddeeffgghhiijjkkllmmnnooppqqrrssttuuvvwwxxyyzz"),
         MAX_CHAR);
@@ -34,7 +35,7 @@ int main(int argc, char **argv)
 
     /*- Let's print out some message */
     printf("\nNormilized Rate for Fuzzy:\n %f\n", nr_fuzzy);
-    printf("Input string:\n--  %s\n", const_str);
+    printf("Input string:\n--  %s\n", gettext(const_str));
     printf("Output string:\n--  %s\n", test_str);
 
     return 0;
